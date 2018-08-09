@@ -1,5 +1,5 @@
 #include "libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp"
-#include "algebra/fields/field_utils.hpp"
+#include "libff/algebra/fields/field_utils.hpp"
 
 const size_t sha256_digest_len = 256;
 
