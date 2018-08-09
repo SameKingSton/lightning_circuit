@@ -4,6 +4,7 @@ dist: trusty
 sudo: required
 
 before_install: 
+  - sudo apt update
   - sudo apt install cmake g++ pkg-config libssl-dev libprocps-dev libboost-all-dev libgmp-dev
   - ./get-libsnark
 
