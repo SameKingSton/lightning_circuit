@@ -1,3 +1,7 @@
+![Travis's result](https://api.travis-ci.com/weikengchen/lightning_circuit.svg?branch=master)
+
+---------
+
 This repo is a fork of Sean Bowe (@ebfull)'s lightning circuit. More background can be found in the original repo https://github.com/ebfull/lightning_circuit.
 
 This fork is experimental change to fix ``./get-libsnark/`` and so on; this fork is for a very special purpose.
