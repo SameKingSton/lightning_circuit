@@ -1,12 +1,12 @@
 OPTFLAGS = -march=native -mtune=native -O2
 CXXFLAGS += -g -Wall -Wextra -Wno-unused-parameter -std=c++11 -fPIC -Wno-unused-variable
-CXXFLAGS += -I $(DEPINST)/include -I $(DEPINST)/include/libsnark -DUSE_ASM -DCURVE_ALT_BN128
+CXXFLAGS += -I $(DEPSRC)/libsnark -I $(DEPSRC)/libsnark/depends/libfqfft -I $(DEPSRC)/libsnark/depends/libff -DUSE_ASM -DCURVE_ALT_BN128
 LDFLAGS += -flto
 
 DEPSRC=depsrc
 DEPINST=depinst
 
-LDLIBS += -L $(DEPINST)/lib -Wl,-rpath $(DEPINST)/lib -L . -lsnark -lgmpxx -lgmp
+LDLIBS += -L . -lsnark -lgmpxx -lgmp -lff -lprocps
 LDLIBS += -lboost_system
 
 all:

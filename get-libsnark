@@ -19,10 +19,6 @@ fi
 set -x
 
 DEPSRC=./depsrc
-DEPINST=./depinst
-
-mkdir -p $DEPINST
-DEPINST=`pwd -P`/$DEPINST  # remember absolute path
 
 mkdir -p $DEPSRC
 cd $DEPSRC
@@ -32,8 +28,9 @@ cd libsnark
 git pull
 if [ "$CURVE" == "BN128" ]; then
     # TODO: submit -fPIC patch to ate-pairing
-    INC_DIR=-fPIC ./prepare-depends.sh
+    INC_DIR=-fPIC
 fi
-make clean
-make lib $LIBSNARK_FLAGS
-make install PREFIX=$DEPINST $LIBSNARK_FLAGS
+git submodule init && git submodule update
+cmake .
+make $LIBSNARK_FLAGS
+sudo make install $LIBSNARK_FLAGS
