@@ -4,7 +4,7 @@
 
 This repo is a fork of Sean Bowe (@ebfull)'s lightning circuit. More background can be found in the original repo https://github.com/ebfull/lightning_circuit.
 
-This fork is an experimental change to fix ``./get-libsnark/`` and so on; this fork is for a catch-the-flag (CTF) contest in the University of Science and Technology of China (USTC).
+This fork is an experimental change to fix ``./get-libsnark`` and so on; this fork is for a catch-the-flag (CTF) contest in the University of Science and Technology of China (USTC).
 
 This repo implements the following SNARK using [libsnark](https://github.com/scipr-lab/libsnark):
 
